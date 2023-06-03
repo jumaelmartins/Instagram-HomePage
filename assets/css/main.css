@@ -19,34 +19,35 @@ html {
 }
 
 main {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
+  display: flex;
+  justify-content: center;
   margin: 3rem auto 0 auto;
-  width: 54%;
 }
 /*  */
 .main-img--container {
   display: flex;
   background: url("../img/home-phones-2x.png") center;
-  background-size: cover;
-  min-height: 60rem;
-  position: relative;
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: 45rem;
+  height: 60rem;
 }
 
 .main-img--container > img {
-  position: absolute;
-  right: 6.5%;
-  top: 2.5rem;
-  max-width: 100%;
-  width: 24rem;
-  height: 51rem;
-  animation: fade 3s ease-in-out backwards infinite;
+  width: 23.5rem;
+  height: 51.3rem;
+  margin-left: 15.5rem;
+  margin-top: 2.5rem;
   opacity: 0;
+  animation: fade forwards 5s ease-in-out infinite;
 }
 
 @keyframes fade {
-  to {
+  50% {
     opacity: 1;
+  }
+  95% {
+    opacity: 0;
   }
 }
 /*----------------------------------------------------------------------------------*/
@@ -128,8 +129,63 @@ footer > ul {
   display: flex;
   flex-wrap: wrap;
   gap: 1rem;
+  justify-content: center;
 }
 ul > li > a {
   color: #7373a0;
   font-size: 1.2rem;
+}
+
+.hidden {
+  display: none;
+}
+
+@media screen and (min-width: 1440px) {
+  main {
+    margin: 30% auto;
+  }
+}
+
+@media screen and (max-width: 872px) {
+  main {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    margin: 50% auto 40% auto;
+  }
+
+  footer {
+    justify-content: center;
+    width: 90%;
+  }
+
+  ul {
+    justify-content: center;
+  }
+}
+
+@media screen and (max-width: 426px) {
+  main {
+    display: flex;
+    width: 100%;
+  }
+
+  .main-container {
+    width: 100%;
+    margin: auto;
+  }
+
+  .main-content {
+    max-width: 100%;
+    border: none;
+    padding: 0 0 3rem;
+  }
+
+  footer {
+    width: 90%;
+  }
+  ul {
+    align-items: center;
+    justify-content: center;
+  }
 }

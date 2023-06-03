@@ -14,5 +14,19 @@ window.addEventListener("load", () => {
     const imgNewPath = imgBasePath + images[currentImg];
 
     img.src = imgNewPath;
-  }, 3000);
+  }, 5000);
 });
+
+const handleScreen = () => {
+  if (window.matchMedia("(max-width: 872px)").matches) {
+    let mainImg = document.querySelector(".main-img--container");
+    mainImg.classList.add("hidden");
+    console.log("ok");
+  } else {
+    let mainImg = document.querySelector(".main-img--container");
+    mainImg.classList.remove("hidden");
+  }
+};
+
+window.addEventListener("resize", handleScreen);
+handleScreen();
