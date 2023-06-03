@@ -148,7 +148,6 @@ ul > li > a {
 
 @media screen and (max-width: 872px) {
   main {
-    display: flex;
     width: 100%;
     justify-content: center;
     margin: 50% auto 40% auto;
@@ -158,15 +157,10 @@ ul > li > a {
     justify-content: center;
     width: 90%;
   }
-
-  ul {
-    justify-content: center;
-  }
 }
 
 @media screen and (max-width: 426px) {
   main {
-    display: flex;
     width: 100%;
   }
 
@@ -186,6 +180,5 @@ ul > li > a {
   }
   ul {
     align-items: center;
-    justify-content: center;
   }
 }
